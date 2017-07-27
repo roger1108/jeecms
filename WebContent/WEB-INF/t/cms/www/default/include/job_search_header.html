@@ -7,14 +7,12 @@
         [#assign workplace=item.optValue/]
     [/#if]
     [/#list]
-    
         <select name="category" style="width:15%;">
         <option value="">任意</option>
         [#list category!?split(",") as opt]
         <option value="${opt!}" [#if queryCategory??][#if queryCategory=="${opt}"]selected="selected"[/#if][/#if]>${opt!}</option>
         [/#list]
         </select>
-    
         <select name="workplace" style="width:15%;">
         <option value="">任意</option>
         [#list workplace!?split(",") as opt]

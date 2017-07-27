@@ -17,6 +17,10 @@ $(function() {
 <script type="text/javascript" src="/${res}/js/jquery.DB_tabMotionBanner.min.js"></script>
 <link type="text/css" rel="stylesheet" href="/${res}/css/index.css" />
 
+
+<script type="text/javascript" src="/${res}/js/jquery.SuperSlide.js"></script>
+
+
 <!--[if lt IE 9]> 
 <script src="/${res}/js/html5shiv.min.js"></script>
 <script src="/${res}/js/respond.min.js"></script>
@@ -26,49 +30,60 @@ $(function() {
 <body>
 [#include "../include/top.html"/]
 [#include "../include/header.html"/]
-<div class="DB_tab25">
-        <ul class="DB_bgSet">
-            <li style="background:url(/${res}/images/pic01.jpg) center center no-repeat;"></li>
-            <li style="background:url(/${res}/images/pic02.jpg) center center no-repeat;"></li>
-        </ul>
-        <ul class="DB_imgSet">
-            <li onclick="javascript:window.location.href='#';">
-                <img class="DB_1_1" src="/${res}/images/pic01_1.png" alt="" />
-                <img class="DB_1_2" src="/${res}/images/pic01_2.png" alt="" />
-                <img class="DB_1_3" src="/${res}/images/pic01_3.png" alt="" />
-                <img class="DB_1_4" src="/${res}/images/pic01_4.png" alt="" />
-            </li>
-            <li onclick="javascript:window.location.href='#';">
-                <img class="DB_2_1" src="/${res}/images/pic02_1.png" alt="" />
-                <img class="DB_2_2" src="/${res}/images/pic02_2.png" alt="" />
-                <img class="DB_2_3" src="/${res}/images/pic02_3.png" alt="" />
-            </li>
-        </ul>
-        <div class="DB_menuWrap">
-            <div style="position:absolute;text-align:center;bottom:25px; height:3px; z-index:999; width:100%;">
-            <ul class="DB_menuSet">
-                <li></li><li></li>
-            </ul>
-            </div>            
-        </div>
-         <script type="text/javascript">
-        $('.DB_tab25').DB_tabMotionBanner({
-            key: 'b28551',
-            autoRollingTime: 4000,
-            bgSpeed: 1000,
-            motion: {
-                DB_1_1: { left: -50, opacity: 0, speed: 1200, delay: 500 },
-                DB_1_2: { left: 0, opacity: 0, speed: 1500, delay: 1500 },
-                DB_1_3: { left: -50, opacity: 0, speed: 1200, delay: 500 },
-				DB_1_4: { top: -20, opacity: 0, speed: 1200, delay: 1500 },
-                DB_2_1: { left: 200, opacity: 0, speed: 1500, delay: 500 },
-                DB_2_2: { left: -200, opacity: 0, speed: 1500, delay: 500 },
-                DB_2_3: { left: -200, opacity: 0, speed: 1500, delay: 500 },
-                end: null
-            }
-        })
-    </script>
-</div>   
+
+
+  <section class="dl_banner" style="width:1200px;margin-top:28px; margin-bottom:0px;margin-left:auto;margin-right:auto">
+    <span class="dl_banner_pre" title="上一张"></span>
+	<span class="dl_banner_next" title="下一张"></span>
+    <div class="bd">
+[@cms_content_list typeId='2' orderBy='4' channelId='78' titLen='35' channelOption='1' dateFormat='yyyy-MM-dd HH:mm:ss']
+      [#list tag_list as a]
+    <div class="v_item">
+      <div class="v_item_img"><!--<a href="${a.url}">--><img src="${a.typeImg!site.defImg}"></a></div>
+      <div class="v_item_txt">
+        <h1><a href="${a.attachments[0].path!}">[@text_cut s=a.title len=titLen append='...'/]</a></h1>
+       <!-- <p>${a.date?string(dateFormat)}  |  文件大小：${a.attr.size!}  |  下载：${a.downs!}</p>  -->
+         <p>文件大小：${a.attr.size!} </p>
+        <div class="video_dis">[@text_cut s=a.description len=86 append='...'/]</div>
+        <div class="dl_Btn" style="color: #1c1b1b; font-size: 20px;">[#if a.attachments?size>0]<a href="${a.attachments[0].path!}" style="color: #1c1b1b; font-size: 20px;">Download&nbsp;&nbsp;&nbsp;资源打包下载</a>[/#if]</div>
+      </div>
+    </div>
+    [/#list]
+    </div>    
+    <div class="hd">
+      <ul>
+        [#list tag_list as a]
+        <li></li>
+        [/#list]
+      </ul>
+    </div>
+      [/@cms_content_list]
+    <script type="text/javascript">
+		$(document).ready(function(){
+				
+		    $(".dl_banner").hover(function(){
+				$(this).find(".dl_banner_pre,.dl_banner_next").stop(true, true).fadeTo("show", 1)
+			},function(){
+				$(this).find(".dl_banner_pre,.dl_banner_next").fadeOut()
+			});
+					
+			$(".dl_banner").slide({
+				titCell: ".hd li ",
+				mainCell: ".bd",
+				delayTime: 200,
+				interTime: 3000,
+				prevCell:".dl_banner_pre",
+				nextCell:".dl_banner_next",
+				effect: "fold",
+				autoPlay: true,
+				trigger: "click",
+			});
+		
+		});
+        </script>
+  </section> 
+
+
 <div class="main container clearfix">  
   <section class="tssj">
     <div class="tssjNav"></div>

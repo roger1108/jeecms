@@ -11,6 +11,7 @@
 <link type="text/css" rel="stylesheet" href="/${res}/css/index.css" />
 <link type="text/css" rel="stylesheet" href="/${res}/css/piccontext.css" />
 
+
 <!--[if lt IE 9]> 
 <script src="/${res}/js/html5shiv.min.js"></script>
 <script src="/${res}/js/respond.min.js"></script>
@@ -110,7 +111,7 @@ Cms.siteFlow("${base}", location.href, document.referrer,"${site.config.flowSwit
   <!--弹出层结束--> 
   <!--图片特效内容开始-->
   <div class="piccontext">
-    <h2>${content.title}</h2>
+    <h1 style="font-size:24px;font-weight:normal;">${content.title}<a class="position" href="${base}/tswq/index.jhtml">${channel.name}</a></h1>
     <div class="content-inf">发布时间：${content.releaseDate}&nbsp;&nbsp;作者：${content.author!'本站编辑'}&nbsp;&nbsp;来源：${content.origin!'本站原创'}&nbsp;&nbsp;浏览次数：<span id="views"></span>
      <div class="content-action"><a class="support">支持<img src="/${res}/images/jiantou1.jpg" />键翻阅图片</a> | <a class="content-comment" href="${base}/comment.jspx?contentId=${content.id!}">我有话说</a> | <span class="content-share">分享
     [#include "inc_share.html"/]

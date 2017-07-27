@@ -31,12 +31,14 @@
         [#assign workplace=item.optValue/]
       [/#if]
       [/#list]
+<!--
       <select class="job_select" name="category">
       <option value= "" >请选择职位</option>
       [#list category!?split(",") as opt]
         <option value="${opt!}" [#if queryCategory??][#if queryCategory=="${opt}"]selected="selected"[/#if][/#if]>${opt!}</option>
       [/#list]
       </select>
+-->
       <select class="job_select" name="workplace">
       <option value= "" >请选择工作地点</option>
       [#list workplace!?split(",") as opt]
@@ -44,8 +46,8 @@
         [/#list]
       </select>
          [/@cms_model]
-      <input class="job_searchCon" name="q" type="text" value="${q!}" id="txtKey" placeholder="网页设计" autocomplete="off" />
-      <input class="job_searchMenu" type="submit" value="职位搜索" />
+      <input class="job_searchCon" name="q" type="text" value="${q!}" id="txtKey" placeholder="请输入关键词搜索" autocomplete="off" />
+      <input class="job_searchMenu" type="submit" value="搜  索" />
       </form>
     </section>
     <section class="job_list">
@@ -54,18 +56,18 @@
       <table cellpadding="0" cellspacing="0" width="100%">
         <tbody>
           <tr class="job_list_menu">
-            <td width="30%">招聘职位</td>
-            <td width="30%">企业名称</td>
+            <td width="30%">招聘职位</td>  
+    <!--        <td width="30%">企业名称</td> -->
             <td>工作地点</td>
-            <td>招聘人数</td>
+     <!--       <td>招聘人数</td>                       -->
             <td>发布时间</td>
           </tr>
            [#list tag_list as content]
           <tr>
             <td width="30%" class="job_name"><a href="${content.url}">${content.title}</a></td>
-            <td width="30%">${content.companyName!}</td>
+      <!--      <td width="30%">${content.companyName!}</td>   -->
             <td>${content.attr.workplace!}</td>
-            <td>${content.attr.nums!}</td>
+      <!--      <td>${content.attr.nums!}</td>                                   -->
             <td>${content.date?string(dateFormat)}</td>
           </tr>
            [/#list]

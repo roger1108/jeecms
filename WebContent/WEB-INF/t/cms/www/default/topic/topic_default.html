@@ -30,7 +30,7 @@
       [#list tag_list as a]
       <div class="item" style="border:0px none;">
         <div><a href="${a.url}" target="_blank" class="title bold">[@text_cut s=a.title len=titLen /]</a></div>
-        <div class="des">[@text_cut s=a.description! len=80 append='...<a class="more bold">[详细]</a>' /]</div>
+        <div class="des">[@text_cut s=a.description! len=80 append='...<a href="${a.url}" class="more bold">[详细]</a>' /]</div>
       </div>
       [/#list]
       [/@cms_content_list]
@@ -39,7 +39,7 @@
       [#if a_index>0]
       <div class="item">
         <div><a href="${a.url}" target="_blank" class="title bold">[@text_cut s=a.title len=titLen /]</a></div>
-        <div class="des">[@text_cut s=a.description! len=80 append='...<a class="more bold">[详细]</a>' /]</div>
+        <div class="des">[@text_cut s=a.description! len=80 append='...<a href="${a.url}" class="more bold">[详细]</a>' /]</div>
       </div>
       [/#if]
       [/#list]
