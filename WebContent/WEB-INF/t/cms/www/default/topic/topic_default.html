@@ -65,9 +65,9 @@
            [/@cms_content_list]
         </div>
         <div class="controler2" data-scro="controler2">
-		  <a href="javascript:;" class="prev"><i></i></a>
-		  <a href="javascript:;" class="next"><i></i></a>
-	    </div>
+      <a href="javascript:;" class="prev"><i></i></a>
+      <a href="javascript:;" class="next"><i></i></a>
+      </div>
         <script type="text/javascript" src="/${res}/js/script.js"></script>
       </div>
     </div>
@@ -91,7 +91,8 @@
       [/#list]
       [/@cms_content_list]
     </div>
-    <div class="item">
+<!--
+	<div class="item">
        [@cms_content_list count='11' orderBy='4' channelId='75' titLen='23' channelOption='1' topicId=topic.id ]
       [#list tag_list as a]
       [#if a_index>7]
@@ -100,8 +101,9 @@
       [/#list]
       [/@cms_content_list]
     </div>
+-->    
   </div>
-  <div class="topic-image">
+  <div class="topic-image fl">
     <h1>专题图文</h1>
     <div class="top-image-list">
  [@cms_content_list typeId='2' recommend='2' channelId='76' count='6' titLen='20' channelOption='1' topicId=topic.id orderBy='4']    
@@ -113,6 +115,23 @@
          [/@cms_content_list]
     </div>
   </div>
+
+<p> &nbsp </p>
+
+  <div class="topic-image fl">
+    <h1>专题视频</h1>
+    <div class="top-image-list">
+ [@cms_content_list typeId='2' recommend='2' channelId='77' count='6' titLen='20' channelOption='1' topicId=topic.id orderBy='4']    
+      <ul>
+        [#list tag_list as a]
+        <li [#if a_index==0||a_index==3]style="margin-left:0px;"[/#if]><a href="${a.url}" target="_blank"><img src="${a.typeImg!site.defImg}"></a></li>
+        [/#list]
+          </ul>
+         [/@cms_content_list]
+    </div>
+  </div>
+
+
 </section>
 [#include "../include/footer.html"/]
 </body>
