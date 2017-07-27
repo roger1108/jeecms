@@ -1,23 +1,23 @@
 <!DOCTYPE HTML>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>${topic.name} - ${site.name}专题 - Powered by JEECMS</title>
-<meta http-equiv="keywords" content="${topic.keywords!}"/>
-<meta http-equiv="description" content="${topic.description!}"/>
-<!--[if lt IE 9]>
-<script src="${resSys}/html5.js" type="text/javascript"></script>
-<![endif]-->
-<script src="/${res}/js/indexshow.js" type="text/javascript"></script>
-<script src="/${res}/js/imgFlip.js" type="text/javascript"></script>
-<link href="${resSys}/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
-<script src="${resSys}/jquery.js" type="text/javascript"></script>
-<script src="${resSys}/jqueryUI/jquery-ui.js" type="text/javascript"></script>
-<script src="${resSys}/front.js" type="text/javascript"></script>
-<script src="/${res}/js/common.js" type="text/javascript"></script>
-<link href="/${res}/css/layout.css" rel="stylesheet" type="text/css" >
-<style type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>${topic.name} - ${site.name}专题 - Powered by zhspring</title>
+  <meta http-equiv="keywords" content="${topic.keywords!}"/>
+  <meta http-equiv="description" content="${topic.description!}"/>
+  <!--[if lt IE 9]>
+  <script src="${resSys}/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <script src="/${res}/js/indexshow.js" type="text/javascript"></script>
+  <script src="/${res}/js/imgFlip.js" type="text/javascript"></script>
+  <link href="${resSys}/jqueryUI/jquery.ui.css" rel="stylesheet" type="text/css"/>
+  <script src="${resSys}/jquery.js" type="text/javascript"></script>
+  <script src="${resSys}/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+  <script src="${resSys}/front.js" type="text/javascript"></script>
+  <script src="/${res}/js/common.js" type="text/javascript"></script>
+  <link href="/${res}/css/layout.css" rel="stylesheet" type="text/css" >
+  <style type="text/css">
 body{margin:0;font:14px Verdana, Arial, Helvetica, sans-serif,"宋体"; color:#42515A; background:#dbf1fc; word-break:break-all;}
 ol,ul,li{ list-style:none; list-style-image:none;}
 .b01{border: 1px #D0EAFF solid;}
@@ -140,275 +140,210 @@ dl.zt dt,dl.zt dd.text{width:160px;}
 </style>
 </head>
 <body>
-<div class="container">
+  <div class="container">
 
-                <div class="theTop">
-                    <div class="theTopLeft">
-                    【<a href="${base}/" target="_blank">JEECMS演示站</a>】
-                    </div>
-                    <div class="theTopRight">
-                    <a href="${base}/tag.jspx">TAG标签</a> | <a href="${base}/search.jspx">搜索</a> | <a href="${base}/rss.jspx">RSS订阅</a> | <a href="#">WAP版</a> | <a onclick="SetHome(window.location)"href="javascript:void(0)">设为首页</a> |
-                                <a onclick="AddFavorite(window.location,document.title)"href="javascript:void(0)">加入收藏</a>&nbsp;
-                    </div>
-                </div>
-				<script type="text/javascript" language="javascript">
-				   //加入收藏
-					   function AddFavorite(sURL, sTitle) {
-						   sURL =encodeURI(sURL); 
-					   try{   
-						  window.external.addFavorite(sURL, sTitle);   
-					   }catch(e) {   
-						  try{   
-							  window.sidebar.addPanel(sTitle, sURL, "");   
-						   }catch (e){   
-							  alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
-						  }   
-					   }
-				   }
-				   
-				   //设为首页
-				   function SetHome(url){
-					   if (document.all) {
-						  document.body.style.behavior='url(#default#homepage)';
-							 document.body.setHomePage(url);
-					   }else{
-						   alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
-					   }
-				   }
-				</script>
-                
-                <div class="topbanner">
-                <img src="${topic.contentImg!'/${res}/img/topic/no_banner.jpg'}" width="100%"/>
-                </div>
-                <table width="98%" border="0" align="center" cellpadding="8" cellspacing="1" bgcolor="#D0EAFF" style="line-height:1.6em; font-size:14px; margin-top:5px;" >
-                <tr>
-                <td bgcolor="#F1F9FF"><strong>专题概要：</strong>	${topic.description!}</td>
-                </tr>
-                </table>
-            
-                <div class="hundred100">
-                    <div class="w670">
-                        <table border="0" cellpadding="0" cellspacing="0" class="b01">
-                        <tr>
-                        <td width="40" background="/${res}/img/topic/lmbj.gif"><img src="/${res}/img/topic/lm_2.gif"/></td>
-                        <td width="100%" align="left" background="/${res}/img/topic/lmbj.gif"><h2>专题资讯头条</h2></td>
-                        </tr>
-                        <tr>
-                        <td colspan="2" valign="top" bgcolor="#FFFFFF">
-                        
-                        <div class="w310">
-                        <!-- 焦点图代码宽310_begin -->
-                        <div class="comiis_wrapad" id="slideContainer">
-                            <div id="frameHlicAe" class="frame cl">
-                                <div class="temp"></div>
-                                <div class="block">
-                                    <div class="cl">
-                                        <ul class="slideshow" id="slidesImgs">
-                                        [@cms_content_list count='2' orderBy='4' typeId='3' titLen='18' channelOption='1' topicId=topic.id]
+    <div class="theTop">
+      <div class="theTopLeft">
+        【
+        <a href="${base}/" target="_blank">中华温泉网</a>
+        】
+      </div>
+      <div class="theTopRight">
+
+        <a onclick="SetHome(window.location)"href="javascript:void(0)">设为首页</a>
+        |
+        <a onclick="AddFavorite(window.location,document.title)"href="javascript:void(0)">加入收藏</a>
+        &nbsp;
+      </div>
+    </div>
+    <script type="text/javascript" language="javascript">
+           //加入收藏
+             function AddFavorite(sURL, sTitle) {
+               sURL =encodeURI(sURL); 
+             try{   
+              window.external.addFavorite(sURL, sTitle);   
+             }catch(e) {   
+              try{   
+                window.sidebar.addPanel(sTitle, sURL, "");   
+               }catch (e){   
+                alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+              }   
+             }
+           }
+           
+           //设为首页
+           function SetHome(url){
+             if (document.all) {
+              document.body.style.behavior='url(#default#homepage)';
+               document.body.setHomePage(url);
+             }else{
+               alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+             }
+           }
+        </script>
+
+    <div class="topbanner">
+      <img src="${topic.contentImg!'/${res}/img/topic/no_banner.jpg'}" width="100%"/>
+    </div>
+    <table width="98%" border="0" align="center" cellpadding="8" cellspacing="1" bgcolor="#D0EAFF" style="line-height:1.6em; font-size:14px; margin-top:5px;" >
+      <tr>
+        <td bgcolor="#F1F9FF"> <strong>专题概要：</strong>
+          ${topic.description!}
+        </td>
+      </tr>
+    </table>
+
+    <div class="hundred100">
+      <div class="w670">
+        <table border="0" cellpadding="0" cellspacing="0" class="b01">
+          <tr>
+            <td width="40" background="/${res}/img/topic/lmbj.gif">
+              <img src="/${res}/img/topic/lm_2.gif"/>
+            </td>
+            <td width="100%" align="left" background="/${res}/img/topic/lmbj.gif">
+              <h2>专题资讯头条</h2>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top" bgcolor="#FFFFFF">
+
+              <div class="w310">
+                <!-- 焦点图代码宽310_begin -->
+                <div class="comiis_wrapad" id="slideContainer">
+                  <div id="frameHlicAe" class="frame cl">
+                    <div class="temp"></div>
+                    <div class="block">
+                      <div class="cl">
+                        <ul class="slideshow" id="slidesImgs">
+                          [@cms_content_list count='2' orderBy='4' typeId='2' channelId='75' titLen='18' channelOption='1' topicId=topic.id]
                                         [#list tag_list as a]
-                                        <li>
-                                            <a href="${a.url}" target="_blank">
-                                            <img src="${a.typeImg!site.defImg}" alt="${a.title}" width="310" height="210"/>
-                                            </a>
-                                            <span class="title">
-                                            [@text_cut s=a.title len=titLen /]
-                                            </span>
-                                        </li>
-                                        [/#list]
+                          <li>
+                            <a href="${a.url}" target="_blank">
+                              <img src="${a.typeImg!site.defImg}" alt="${a.title}" width="310" height="210"/>
+                            </a>
+                            <span class="title">[@text_cut s=a.title len=titLen /]</span>
+                          </li>
+                          [/#list]
                                         [/@cms_content_list]
-                                        </ul>
-                                    </div>
-                                    <div class="slidebar" id="slideBar">
-                                        <ul>
-                                            <li class="on">1</li>
-                                            <li>2</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <script type="text/javascript">
-                            SlideShow(3000);
-                        </script>
-                        <!-- 焦点图代码宽310_end -->
-                        </div>
-                        
-                        <div class="w350">
-                        [@cms_content_list topicId=topic.id count='9' orderBy='4' titLen='15'  append='...' channelOption='1']
-                        <ul class="list">
-                        [#list tag_list as a]
-                        <li style="background:url(${base}/r/cms/head-mark2.gif) no-repeat 1px 10px; text-indent:10px;"><a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a></li>
-                        [/#list]
                         </ul>
-                        [/@cms_content_list]
-                        </div>	
-                        
-                        </td>
-                        </tr>
-                        </table>
-                        
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01 mt5">
-                        <tr>
-                        <td width="40" background="/${res}/img/topic/lmbj.gif"><img src="/${res}/img/topic/lm_2.gif"/></td>
-                        <td width="100%" background="/${res}/img/topic/lmbj.gif"><h2>专题精彩图文</h2></td>
-                        </tr>
-                        <tr>
-                        <td colspan="2" bgcolor="#FFFFFF">
-                        <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
-                        <tr>
-                        <td height="170">
-                        <div class="ztjctw">
-                            <ul>
-                                [@cms_content_list typeId='2' count='10' titLen='8' channelOption='1' topicId=topic.id orderBy='4']
-                                [#list tag_list as a]
-                                  <li>
-                                <a href="${a.url}" title="${a.title}" target="_blank">
-                                    <img src="${a.typeImg!site.defImg}" alt="${a.title}" />
-                                </a>
-                                <a href="${a.url}" title="${a.title}" target="_blank">   
-                                <p>[@text_cut s=a.stit len=titLen append=append/]</p>
-                                </a>
-                                </li>
-                                [/#list]
-                                [/@cms_content_list]
-                            </ul>
-                        </div>
-                        </td>
-                        </tr>
-                        </table>
-                        </td>
-                        </tr>
-                        </table>
-                        
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01 mt5">
-                        <tr>
-                        <td width="40" background="/${res}/img/topic/lmbj.gif"><img src="/${res}/img/topic/lm_2.gif"/></td>
-                        <td width="100%" background="/${res}/img/topic/lmbj.gif"><h2>专题资讯库</h2></td>
-                        </tr>
-                        <tr>
-                        <td colspan="2" valign="top" bgcolor="#FFFFFF">	
-                        <div class="ztzxkList">		
-                        [@cms_content_page topicId=topic.id count='15' titLen='30' append='...' orderBy='2' dateFormat='MM-dd' channelOption='1']
+                      </div>
+                      <div class="slidebar" id="slideBar">
                         <ul>
-                        [#list tag_pagination.list as a]
-                        <li><a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a><em>[${a.date?string(dateFormat)}]</em></li>
-                        [/#list]
+                          <li class="on">1</li>
+                          <li>2</li>
                         </ul>
-                        [/@cms_content_page]
-                        </div>
-                        </td>	
-                        </tr>
-                        </table>
+                      </div>
                     </div>
-                    
-                    <div class="w280">
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01">
-                        <tr>
-                        <td width="40" background="/${res}/img/topic/lmbj.gif">
-                        <img src="/${res}/img/topic/lm_2.gif"/>
-                        </td>
-                        <td width="100%" background="/${res}/img/topic/lmbj.gif"><h2>专题资讯关注排行</h2></td>
-                        </tr>
-                        <tr>
-                        <td colspan="2" bgcolor="#FFFFFF">
-                        <ul class="order">
-                        [@cms_content_list topicId=topic.id count='10' titLen='17' orderBy='8' channelOption='1']
-                        [#list tag_list as a]
-                        <li><a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=titLen append=append/]</a></li>
-                        [/#list]
-                        [/@cms_content_list]
-                        </ul>
-                        </td>
-                        </tr>
-                        </table>
-                        
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01 mt5">
-                        <tr>
-                        <td width="40" background="/${res}/img/topic/lmbj.gif">
-                        <img src="/${res}/img/topic/lm_2.gif"/>
-                        </td>
-                        <td width="100%" background="/${res}/img/topic/lmbj.gif"><h2>专题热评资讯</h2></td>
-                        </tr>
-                        <tr>
-                        <td colspan="2" bgcolor="#FFFFFF">
-                        <div id="plcon">
-                            <ul>
-                                [@cms_comment_list count='8' checked='1' textLen='50' append='...']
-                                [#list tag_list as c]
-                                <li>
-                                    <span style="color:#E66100;">${(c.commentUser.username)!"匿名网友"}</span>
-                                    <span style="color:#aaaaaa;">&nbsp;对&nbsp;</span>
-                                    <a href="${c.content.url}" target="_blank"><span style="color:#1C77BA;">${c.content.title}</span></a>
-                                    <span style="color:#aaaaaa;">评论道：</span>
-                                    <span style="color:#000000;">[@text_cut s=c.textHtml len=textLen append=append/]</span>
-                                </li>
-                                [/#list]
-                                [/@cms_comment_list]
-                            </ul>
-                        </div>
-                        </td>
-                        </tr>
-                        </table>
-                        <script src="/${res}/js/shensuo.js" type="text/javascript"></script>
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01 mt5">
-                        <tr>
-                        <td width="40" background="/${res}/img/topic/lmbj.gif">
-                        <img src="/${res}/img/topic/lm_2.gif"/>
-                        </td>
-                        <td width="100%" align="left" background="/${res}/img/topic/lmbj.gif"><h2>其它热门专题</h2></td>
-                        </tr>
-                        <tr>
-                        <td colspan="2" bgcolor="#FFFFFF">				
-                        <ul class="m-list list-tweet">
-                        [@cms_topic_list count='7' recommend='1' descLen='35' append='...']
-                        [#list tag_list as t]
+                  </div>
+                </div>
+                <script type="text/javascript">SlideShow(3000);</script>
+                <!-- 焦点图代码宽310_end --> </div>
+
+              <div class="w350">
+                [@cms_content_list topicId=topic.id count='9'  orderBy='4' titLen='15'  append='...' channelOption='1']
+                <ul class="list">
+                  [#list tag_list as a]
+                  <li style="background:url(${base}/r/cms/head-mark2.gif) no-repeat 1px 10px; text-indent:10px;">
+                    <a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+                  </li>
+                  [/#list]
+                </ul>
+                [/@cms_content_list]
+              </div>
+
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01 mt5">
+          <tr>
+            <td width="40" background="/${res}/img/topic/lmbj.gif">
+              <img src="/${res}/img/topic/lm_2.gif"/>
+            </td>
+            <td width="100%" background="/${res}/img/topic/lmbj.gif">
+              <h2>专题图文</h2>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#FFFFFF">
+              <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="170">
+                    <div class="ztjctw">
+                      <ul>
+                        [@cms_content_list typeId='2' count='10' channelId='76' titLen='8' channelOption='1' topicId=topic.id orderBy='4']
+                                [#list tag_list as a]
                         <li>
-                        <h3 onMouseOver=javascript:ShowFLT(${t_index+1}) href="javascript:void(null)">
-                        <a href="${base}/topic/${t.id}.jspx">
-                        ${t.name}
-                        </a>
-                        </h3>
-                        <p id=LM${t_index+1} [#if t_index!=0]style="display:none;"[/#if] class="drink-me clearfix">
-                        <a href="${base}/topic/${t.id}.jspx">
-                        <img src="${t.titleImg!site.defImg}" width="90" height="64"/>
-                        </a>
-                        [@text_cut s=t.description len=descLen append=append/]
-                        <span class="cBlue"><a href="${base}/topic/${t.id}.jspx"> 详细&gt;&gt;</a></span>
-                        </p>
+                          <a href="${a.url}" title="${a.title}" target="_blank">
+                            <img src="${a.typeImg!site.defImg}" alt="${a.title}" />
+                          </a>
+                          <a href="${a.url}" title="${a.title}" target="_blank">
+                            <p>[@text_cut s=a.stit len=titLen append=append/]</p>
+                          </a>
                         </li>
                         [/#list]
-                        [/@cms_topic_list]
-                        </ul>	
-                        </td>
-                        </tr>
-                        </table>
+                                [/@cms_content_list]
+                      </ul>
                     </div>
-                </div>
-            	<div style="clear:both; height:10px;"></div>
-                <table width="98%" border="0" align="center" cellpadding="8" cellspacing="1" bgcolor="#D0EAFF" class="mt5 rgt">
-                <tr>
-                <td height="20" align="center" bgcolor="#F1F9FF">
-                <a target="_blank" href="/about.jhtml">关于我们</a> - 
-                <a target="_blank" href="http://www.jeecms.com/lxwm.htm">联系我们</a> - 
-                <a target="_blank" href="http://www.jeecms.com/zhaopin.htm">诚聘英才</a> -
-                <a target="_blank" href="http://www.jeecms.com">友情链接</a> - 
-                <a target="_blank" href="http://www.jeecms.com/download/index.htm">程序下载</a> - 
-                <a target="_blank" href="http://www.jeecms.com">合作服务</a> - 
-                <a target="_blank" href="http://www.jeecms.com/xkxy.htm">许可协议</a> - 
-                <a onclick="SetHome(window.location)"href="javascript:void(0)">设为首页</a> -		<a onclick="AddFavorite(window.location,document.title)"href="javascript:void(0)">加入收藏</a> - 
-                <a target="_blank" href="${base}/jeeadmin/jeecms/index.do">管理登录</a>
-                </td>
+                  </td>
                 </tr>
-                </table>	
-                <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="mt5 rgt" style="line-height:1.8em;">
+              </table>
+            </td>
+          </tr>
+        </table>
+
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="b01 mt5">
+          <tr>
+            <td width="40" background="/${res}/img/topic/lmbj.gif">
+              <img src="/${res}/img/topic/lm_2.gif"/>
+            </td>
+            <td width="100%" background="/${res}/img/topic/lmbj.gif">
+              <h2>专题视频</h2>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" bgcolor="#FFFFFF">
+              <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                <td height="50" align="center">
-                电话：0791-6538070、13576281815　传真：0791-6538070  [@process_time/]<br />
-                Powered by <a target="_blank" href="http://www.jeecms.com">JEECMS</a> Copyright &copy; 2007-2013 www.jeecms.com, All Rights Reserved
-                </td>
+                  <td height="170">
+                    <div class="ztjctw">
+                      <ul>
+                        [@cms_content_list typeId='2' count='10' channelId='77' titLen='8' channelOption='1' topicId=topic.id orderBy='4']  
+                                [#list tag_list as a]
+                        <li>
+                          <a href="${a.url}" title="${a.title}" target="_blank">
+                            <img src="${a.typeImg!site.defImg}" alt="${a.title}" />
+                          </a>
+                          <a href="${a.url}" title="${a.title}" target="_blank">
+                            <p>[@text_cut s=a.stit len=titLen append=append/]</p>
+                          </a>
+                        </li>
+                        [/#list]
+                                [/@cms_content_list]
+                      </ul>
+                    </div>
+                  </td>
                 </tr>
-                </table>
-                
-</div>
+              </table>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <div class="w280">
+        
+
+        
+        <script src="/${res}/js/shensuo.js" type="text/javascript"></script>
+        
+      </div>
+    </div>
+    <div style="clear:both; height:10px;"></div>
+    
+
+
+  </div>
 </body>
 </html>
