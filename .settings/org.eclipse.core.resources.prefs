@@ -1,2 +1,12 @@
 eclipse.preferences.version=1
-encoding/<project>=UTF-8
+encoding//WebContent/WEB-INF=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/default/csi=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/default/include/nav.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/default/include/right310.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/include/footer.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/include/friend_link.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/include/header.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/include/header_message.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/member/member_header.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/member/member_navi.html=UTF-8
+encoding//WebContent/WEB-INF/t/cms/www/mobile/member/member_top.html=UTF-8
