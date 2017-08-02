@@ -39,14 +39,48 @@ window.location.href=window.document.referrer;
 <script src="/${res}/js/html5shiv.min.js"></script>
 <script src="/${res}/js/respond.min.js"></script>
 <![endif]-->
+<style type="text/css">
+	.header-icon-left {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 44px;
+	    overflow: hidden;
+	}
+
+	.header-nav {
+	    float: left;
+	    margin-left: 10px;
+	    background-position: 0 0;
+	}
+
+	.header-icon-right {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    height: 44px;
+	    overflow: hidden;
+	}
+	.header-home {
+	    float: left;
+	    margin-left: 30px;
+	    background-position: 0 -25px;
+	}
+</style>
 
 </head>
 
 <body>
 <div class="viewport">
   <header class="header-pic">
-    <div class="back"><a href="javascript:return_prepage();"></a></div>
-    <div class="header-pic-r fr"><a class="pic-share" onClick="toshare()"></a></div>
+<!--     <div class="back"><a href="javascript:return_prepage();"></a></div> -->
+<div class="header-icon-left">
+  	<a class="header-nav"></a>
+</div>
+<!--     <div class="header-pic-r fr"><a class="pic-share" onClick="toshare()"></a></div> -->
+<div class="header-icon-right">
+  	<a href="/" class="header-home"></a>
+</div>
     <div class="am-share">
          <div style="padding:20px 16px 16px 16px;"> 
         <ul class="am-share-sns" class="bdsharebuttonbox">
@@ -111,9 +145,20 @@ window.location.href=window.document.referrer;
 		disableScroll:false,
 		callback: function(pos) {
 			var i = bullets.length;
+			if (i ==2)
+				flag = true;
+			else
+				flag = false;
 			while (i--) {
 				bullets[i].className = ' ';
 			}
+			if(flag){
+				if(pos==2)
+					pos =0;
+				if(pos==3)
+					pos =1
+			}
+				
 			bullets[pos].className = 'cur';
 
 		}
