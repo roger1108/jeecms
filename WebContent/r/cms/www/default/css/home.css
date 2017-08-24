@@ -213,7 +213,7 @@
 .rdjj-top-news{font-size:16px; font-weight:bold; margin:20px 0 10px;}
 .rdjj-top-news a{font-size:16px; font-weight:bold;}
 
-.rdjj-list li{line-height:30px; padding-left:11px; position:relative;}
+.rdjj-list li{line-height:30px; padding-left:11px; position:relative;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .rdjj-list li:before{width:3px; height:3px; display:inline-block; position:absolute; content:""; left:0; top:13px; background-color:#c0c0c0;}
 .rdjj-list li .bold{font-weight:bold;}
 
