@@ -3,6 +3,7 @@ package com.jeecms.common.upload;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.regex.Pattern;
 
@@ -25,7 +26,12 @@ public class UploadUtils {
 
 	public static String generateFilename(String path, String ext) {
 		return path + MONTH_FORMAT.format(new Date())
-				+ RandomStringUtils.random(4, Num62.N36_CHARS) + "." + ext;
+		+ RandomStringUtils.random(4, Num62.N36_CHARS) + "." + ext;
+	}
+	
+	public static String generateRamdonFilename(String ext) {
+		return  MONTH_FORMAT.format(Calendar.getInstance().getTime())
+		+ RandomStringUtils.random(4, Num62.N36_CHARS) + "." + ext;
 	}
 	
 	public static String generateMonthname() {

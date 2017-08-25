@@ -354,6 +354,7 @@
 .jcspList .tssjItem #caseBlanche{display:none;}
 .jcspList .tssjItem:hover #caseBlanche, .jcspList .tssjItem:hover .tssjImg:before{display:block;}
 .jcspList .tssjItem #load{height:62px;width:62px;position:absolute;top:70px;left:145px; background:url(../images/video-load.png) center center no-repeat; z-index:2;}
+.jcspList .tssjItem #load a{position: absolute; width: 62px; height: 62px;}
 .jcspList .tssjItem #test{height:8px;width:8px;position:absolute;background-color:#fff;border-radius:50%;top:0px;left:10px; z-index:2;}
 .jcspList .tssjItem #rond {height:60px;width:60px;border:1px solid #fff;border-radius:50%;position:absolute;top:70px;left:145px;animation:rond 2s infinite;-webkit-animation:rond 2s infinite; z-index:2;}
 @keyframes rond {

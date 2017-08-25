@@ -2,6 +2,7 @@ package com.jeecms.common.upload;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletContext;
 
@@ -19,11 +20,14 @@ public class FileRepository implements ServletContextAware {
 
 	public String storeByExt(String path, String ext, MultipartFile file)
 			throws IOException {
-		String filename = UploadUtils.generateFilename(path, ext);
-		File dest = new File(getRealPath(filename));
+		//String filename = UploadUtils.generateFilename(path, ext);
+		//File dest = new File(getRealPath(filename));
+		String fileName=UploadUtils.generateRamdonFilename(ext);
+		String fileUrl =path+fileName;
+		File dest = new File(getRealPath(path),fileName);
 		dest = UploadUtils.getUniqueFile(dest);
 		store(file, dest);
-		return filename;
+		return fileUrl;
 	}
 
 	public String storeByFilename(String filename, MultipartFile file)
@@ -48,11 +52,14 @@ public class FileRepository implements ServletContextAware {
 
 	public String storeByExt(String path, String ext, File file)
 			throws IOException {
-		String filename = UploadUtils.generateFilename(path, ext);
-		File dest = new File(getRealPath(filename));
+		//String filename = UploadUtils.generateFilename(path, ext);
+		//File dest = new File(getRealPath(filename));
+		String fileName=UploadUtils.generateRamdonFilename(ext);
+		String fileUrl =path+fileName;
+		File dest = new File(getRealPath(path),fileName);
 		dest = UploadUtils.getUniqueFile(dest);
 		store(file, dest);
-		return filename;
+		return fileUrl;
 	}
 
 	public String storeByFilename(String filename, File file)
