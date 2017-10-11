@@ -45,7 +45,7 @@ $(function() {
     [@cms_content_list typeId='2' channelId=channel.id recommend='1' orderBy='4' channelOption='1']
       <ul>
       [#list tag_list as a]
-        <li style="background:url(${a.titleImg!}) no-repeat;"></li>
+        <li style="background:url(${a.titleImg!}) no-repeat;" onclick="javascript:location.href='${a.url}'"></li>
       [/#list]
       </ul>
     [/@cms_content_list]
