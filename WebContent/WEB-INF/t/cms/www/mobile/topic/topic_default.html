@@ -215,7 +215,7 @@ dl.zt dt,dl.zt dd.text{width:160px;}
                     <div class="block">
                       <div class="cl">
                         <ul class="slideshow" id="slidesImgs">
-                          [@cms_content_list count='2' orderBy='4' typeId='2' channelId='75' titLen='18' channelOption='1' topicId=topic.id]
+                               [@cms_content_list count='6' recommend='1' orderBy='4' typeId='2'  titLen='18' channelOption='1' topicId=topic.id]
                                         [#list tag_list as a]
                           <li>
                             <a href="${a.url}" target="_blank">
@@ -229,8 +229,11 @@ dl.zt dt,dl.zt dd.text{width:160px;}
                       </div>
                       <div class="slidebar" id="slideBar">
                         <ul>
-                          <li class="on">1</li>
-                          <li>2</li>
+                           [@cms_content_list count='6' recommend='1' orderBy='4' typeId='2'  titLen='18' channelOption='1' topicId=topic.id]
+                           [#list tag_list as a]
+				          <li [#if a_index<1]class="on"[/#if]> ${a_index+1} </li>
+                            [/#list]
+			   [/@cms_content_list]
                         </ul>
                       </div>
                     </div>
