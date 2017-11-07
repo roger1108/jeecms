@@ -160,7 +160,7 @@ $(function() {
     <div class="right-fr fr">
       <div class="home-banner" id="section-focus-pic">
         <div class="bd" data-scro="list">          
-          [@cms_content_list count='5' typeId='2' recommend='1' channelId='75,76' orderBy='4' titLen='22' channelOption='0' dateFormat='yyyy-MM-dd']      
+          [@cms_content_list count='6' typeId='2' recommend='1' channelId='75,76' orderBy='4' titLen='22' channelOption='0' dateFormat='yyyy-MM-dd']      
           <ul>
             [#list tag_list as a]
             <li class="item" [#if a_index<1]style="left:0;"[/#if]><a href="${a.url}" target="_blank"><img src="${a.typeImg!}"><div class="banner-title"><i class="Cpic"></i><span>[@text_cut s=a.title len=titLen /]</span></div></a></li>
@@ -169,7 +169,7 @@ $(function() {
          [/@cms_content_list]
         </div>
         <div class="hd" data-scro="controler">
-            [@cms_content_list count='5' typeId='2' recommend='1' channelId='75,76' orderBy='4' titLen='22' channelOption='0' dateFormat='yyyy-MM-dd']
+            [@cms_content_list count='6' typeId='2' recommend='1' channelId='75,76' orderBy='4' titLen='22' channelOption='0' dateFormat='yyyy-MM-dd']
                [#list tag_list as a]
                <b [#if a_index<1]class="down"[/#if]>${a_index+1}</b>
                [/#list]
@@ -183,7 +183,7 @@ $(function() {
         <script type="text/javascript" src="/${res}/js/script.js"></script>
       </div>
       <div class="home-video">
-        <div class="nav-link"><a href="${base}/video/index.jhtml">视频新闻</a></div>
+        <div class="nav-link"><a href="${base}/video/index.jhtml">视频聚焦</a></div>
         <div class="item clearfix" style="margin-top:14px;">
           [@cms_content_list count='1' typeId='2' channelId='77' recommend='1' orderBy='4' titLen='11' channelOption='0']
           [#list tag_list as a]
@@ -200,6 +200,7 @@ $(function() {
           [/@cms_content_list]
           </div>
         </div>
+
         <div class="item clearfix">
           [@cms_content_list count='2' typeId='2' channelId='77' recommend='1' orderBy='4' titLen='11' channelOption='0']
           [#list tag_list as a]
@@ -220,8 +221,17 @@ $(function() {
           [/@cms_content_list]
           </div>
         </div>
-        <div class="video-list">
-           [@cms_content_list count='10' typeId='2' channelId='77' recommend='2' orderBy='4' titLen='26' channelOption='0'] 
+       
+      <div class="item clearfix">
+          [@cms_content_list count='3' typeId='2' channelId='77' recommend='1' orderBy='4' titLen='11' channelOption='0']
+          [#list tag_list as a]
+          [#if a_index>1]
+          <div class="video-pic fl"><a href="${a.url}" target="_blank"><img src="${a.typeImg!}"><span>[@text_cut s=a.title len=titLen /]</span></a></div>
+          [/#if]
+          [/#list]
+          [/@cms_content_list]
+          <div class="video-txt">
+          [@cms_content_list count='9' typeId='2' channelId='77' recommend='2' orderBy='4' titLen='19' channelOption='0'] 
             <ul>
             [#list tag_list as a]
             [#if a_index>5]
@@ -230,7 +240,11 @@ $(function() {
             [/#list]
             </ul>
           [/@cms_content_list]
+          </div>
         </div>
+
+
+
       </div>
     </div>
   </section>
@@ -282,9 +296,9 @@ $(function() {
       </div>
     </div>
     <div class="rdjj" style="margin-top:16px;">
-      <div class="nav-link"><a href="${base}/doc/index.jhtml">行业规范</a></div>
+      <div class="nav-link"><a href="${base}/doc/index.jhtml">行业知识·法律法规</a></div>
       <div class="rdjj-list job-list doc-list">
-      [@cms_content_list count='10' orderBy='4' channelId='81' titLen='30' channelOption='0' dateFormat='yyyy-MM-dd']
+      [@cms_content_list count='10' recommend='2' orderBy='4' channelId='81' titLen='30' channelOption='0' dateFormat='yyyy-MM-dd']
         <ul>
 	      [#list tag_list as a] 
 	       <li [#if (a.attr.hy)="PDF"]  class="pdf"  [/#if]   [#if (a.attr.hy)="PPT"] class="ppt" [/#if]   [#if (a.attr.hy)="DOC"] class="doc" [/#if]>
@@ -299,9 +313,9 @@ $(function() {
     </div>
     <div class="home-ch-m fr clearfix">
     <div class="rdjj" style="margin:0; overflow:hidden;">
-      <div class="nav-link"><a href="${base}/download/index.jhtml">温泉新闻</a></div>
+      <div class="nav-link"><a href="${base}/download/index.jhtml">国土部·中矿联之窗</a></div>
      <div class="rdjj-list job-list">
-      [@cms_content_list count='10' orderBy='4' channelId='75' typeId='1,2' titLen='30' channelOption='0' dateFormat='yyyy-MM-dd']
+        [@cms_content_list count='10' recommend='1' orderBy='4' channelId='81' titLen='30' channelOption='0' dateFormat='yyyy-MM-dd']
         <ul>
 	      [#list tag_list as a] 
 	          <li><a [#if (a_index)%6=0]class="bold"[/#if] href="${a.url}" target="_blank">[@text_cut s=a.title! len=titLen append='...'/]</a></li>
