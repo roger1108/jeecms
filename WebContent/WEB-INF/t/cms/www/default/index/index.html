@@ -14,6 +14,8 @@
 <link rel="shortcut icon" href="/favicon.ico"/>
 <link rel="bookmark" href="/favicon.ico"/>
 
+
+
 <!--[if lt IE 9]> 
 <script src="/${res}/js/html5shiv.min.js"></script>
 <script src="/${res}/js/respond.min.js"></script>
@@ -47,8 +49,6 @@ $(function() {
   <div class="red" style="width:100%;"></div>	
 </section>
 [#include "../include/header.html"/]
-
-
 
 <div class="DB_tab25">
         <ul class="DB_bgSet">
@@ -93,6 +93,9 @@ $(function() {
         })
     </script>
 </div>   
+
+
+
 
 <div class="main container home-main clearfix">
 
@@ -141,7 +144,7 @@ $(function() {
 
 
     <div class="rdjj fl">
-      <div class="nav-link"><a href="${base}/news/index.jhtml">热点聚焦</a></div>
+      <div class="nav-link"><a href="${base}/wqxw/index.jhtml">热点聚焦</a></div>
       [@cms_content_list typeId='4' count='1' titLen='25' channelId='75' orderBy='4' channelOption='0' dateFormat='yyyy-MM-dd']
       [#list tag_list as a]
       <div class="rdjj-top-news"><a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append='...'/]</a></div>
@@ -183,7 +186,7 @@ $(function() {
         <script type="text/javascript" src="/${res}/js/script.js"></script>
       </div>
       <div class="home-video">
-        <div class="nav-link"><a href="${base}/video/index.jhtml">视频聚焦</a></div>
+        <div class="nav-link"><a href="${base}/sjzx/index.jhtml">视频聚焦</a></div>
         <div class="item clearfix" style="margin-top:14px;">
           [@cms_content_list count='1' typeId='2' channelId='77' recommend='1' orderBy='4' titLen='11' channelOption='0']
           [#list tag_list as a]
@@ -296,7 +299,7 @@ $(function() {
       </div>
     </div>
     <div class="rdjj" style="margin-top:16px;">
-      <div class="nav-link"><a href="${base}/doc/index.jhtml">行业知识·法律法规</a></div>
+      <div class="nav-link"><a href="${base}/zcfg/index.jhtml">行业知识・法律法规</a></div>
       <div class="rdjj-list job-list doc-list">
       [@cms_content_list count='10' recommend='2' orderBy='4' channelId='81' titLen='30' channelOption='0' dateFormat='yyyy-MM-dd']
         <ul>
@@ -313,7 +316,7 @@ $(function() {
     </div>
     <div class="home-ch-m fr clearfix">
     <div class="rdjj" style="margin:0; overflow:hidden;">
-      <div class="nav-link"><a href="${base}/download/index.jhtml">国土部·中矿联之窗</a></div>
+      <div class="nav-link"><a href="${base}/zcfg/index.jhtml">国土部・中矿联之窗</a></div>
      <div class="rdjj-list job-list">
         [@cms_content_list count='10' recommend='1' orderBy='4' channelId='81' titLen='30' channelOption='0' dateFormat='yyyy-MM-dd']
         <ul>
@@ -339,7 +342,7 @@ $(function() {
     </div>
   </section>
   <section class="rdjj tssj">
-    <div class="nav-link"><a>温泉寻访</a></div>
+    <div class="nav-link"><a href="${base}/tswq/index.jhtml">温泉寻访</a></div>
     <script type="text/javascript" src="/${res}/js/jquery.bxslider.js"></script>
     <link href="/${res}/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
     <div class="tssj-list">
