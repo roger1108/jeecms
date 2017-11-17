@@ -32,8 +32,10 @@ dl.zt dt,dl.zt dd.text{width:160px;}
 .hundred100/*页面百分比*/{ width:960px; margin:10px auto auto auto;}
 .w280{ float:left; width:280px; margin-left:1%;}
 .w670{ float:left; width:670px;}
-.w310{ float:left; width:310px;}
-.w350{ float:right; width:350px;}
+#.w310{ float:left; width:310px;}
+#.w350{ float:right; width:350px;}
+.w310{ float:left;}
+.w350{ float:left;}
 
 .theTop/*顶栏*/{ background:#f6f6f6; width:100%; border-bottom:1px solid #dedede; font-size:12px; height:30px; line-height:30px;}
 .theTop a{ font-size:12px;}
@@ -118,19 +120,21 @@ dl.zt dt,dl.zt dd.text{width:160px;}
 .w670{ float:none; width:100%;}
 }
 
+
 @media screen and (min-width:400px) and (max-width:810px){
-.w310{ float:left; width:46.268656%;}/* 310px / 670px */
-.w350{ float:left; width:52.238805%;}
+#.w310{ float:left; width:46.268656%;}/* 310px / 670px */
+#.w350{ float:left; width:52.238805%;}
 }
+
 
 @media screen and (min-width:150px) and (max-width:450px){
 .ztzxkList ul li a{ float:none;}
 .ztzxkList ul li em{ float:none; font-size:12px; color:#666; display:none;}
 }
 
-@media screen and (min-width:200px) and (max-width:400px){
+#@media screen and (min-width:200px) and (max-width:400px){
 .w310{ float:none; width:98%; margin:auto;}
-.w350{ float:none; width:100%;}
+.w350{ float:none; width:98%;margin:auto;}
 }
 
 @media screen and (max-width:700px){
@@ -241,13 +245,18 @@ dl.zt dt,dl.zt dd.text{width:160px;}
                 </div>
                 <script type="text/javascript">SlideShow(3000);</script>
                 <!-- 焦点图代码宽310_end --> </div>
+                
+<div class="clear"> </div>
+
 
               <div class="w350">
                 [@cms_content_list topicId=topic.id count='9'  orderBy='4' titLen='15'  append='...' channelOption='1']
-                <ul class="list">
+                <ul class="list" style="width: 90%;">
                   [#list tag_list as a]
-                  <li style="background:url(${base}/r/cms/head-mark2.gif) no-repeat 1px 10px; text-indent:10px;">
-                    <a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title len=20 append=append/]</a>
+                  <li style="background:url(${base}/r/cms/head-mark2.gif) no-repeat 1px 10px; text-indent:10px; white-space: nowrap;
+    text-overflow: ellipsis;">
+                 <!--   <a href="${a.url}" title="${a.title}" target="_blank">[@text_cut s=a.title  len=20 append=append/]</a>   -->
+                    <a href="${a.url}" title="${a.title}" target="_blank">${a.title}</a>
                   </li>
                   [/#list]
                 </ul>
