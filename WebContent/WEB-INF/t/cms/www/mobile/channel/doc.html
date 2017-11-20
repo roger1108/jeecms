@@ -32,16 +32,17 @@ $(function() {
   <div class="addWrap">
 	<div class="swipe" id="mySwipe">
 		<div class="swipe-wrap">
-         [@cms_content_list orderBy='4' recommend='1' channelId='81' titLen='30' channelOption='1' dateFormat='MM-dd']
-           [#list tag_list as a]
+        [@cms_content_list orderBy='4' recommend='1' channelId='81' titLen='30' channelOption='1' dateFormat='MM-dd']
+     <!--       [#list tag_list as a]
 			<div><a href="${a.url}"><img class="img-responsive" src="${a.typeImg!}"/></a></div>
 		[/#list]
-         
+        -->
 		</div>
 	</div>	
 	<ul id="dl_position">
   [#list tag_list as a]
-      <li [#if a_index<1]class="cur"[/#if]></li>
+      <!-- <li [#if a_index<1]class="cur"[/#if]></li> -->
+      <li ></li>
 	[/#list]
 	</ul>
       [/@cms_content_list]
