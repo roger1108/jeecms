@@ -23,16 +23,45 @@
 <div class="main container clearfix">
   <section class="content_w850">
     <h1>专题专栏</h1>
+      <!-- t.id 为1和 2 是子专题，t.id为4是父专题 对应special为1, t.id为3没有子专题。-->
+  <!-- 首先判断是不是要查找2级专题 (special不等于0就是在查找2级专题)，如果是href就是{t.id}.jspx, 
+   如果是查找1级专题， 有子专题的href就是topic.jspx?special=, 还要排出那些2级专题后剩下的href是{t.id}.jspx-->
     <div class="content-txt">
-      [@cms_topic_page count='10' descLen='100' append='...']
+      [@cms_topic_page count='100' descLen='100' append='...']
       [#list tag_pagination.list as t]
-      <div class="topic-item clearfix">
-        <div class="topic-item-img"><a href="${base}/topic/${t.id}.jspx" target="_blank"><img src="${t.titleImg!site.defImg}"></a></div>
-        <div class="topic-item-title"><a href="${base}/topic/${t.id}.jspx" target="_blank">${t.name}</a></div>
-        <div class="topic-item-des">[@text_cut s=t.description len=descLen append=append/]</div>
-      </div>
+      [#if special =="1" ]
+      		[#if t.id==1 || t.id==2  ]
+		      <div class="topic-item clearfix">
+		        <div class="topic-item-img"><a href="${base}/topic/${t.id}.jspx" target="_blank"><img src="${t.titleImg!site.defImg}"></a></div>
+		        <div class="topic-item-title"><a href="${base}/topic/${t.id}.jspx" target="_blank">${t.name}</a></div>
+		        <div class="topic-item-des">[@text_cut s=t.description len=descLen append=append/]</div>
+		      </div>
+      		[/#if]
+     	
+      
+      [#elseif special =="2"]
+      
+      [#else]
+		      
+	      [#if t.id==4 ]
+			  <div class="topic-item clearfix">
+		        <div class="topic-item-img"><a href="${base}/topic.jspx?special=1" target="_blank"><img src="${t.titleImg!site.defImg}"></a></div>
+		        <div class="topic-item-title"><a href="${base}/topic.jspx?special=1" target="_blank">${t.name}</a></div>
+		        <div class="topic-item-des">[@text_cut s=t.description len=descLen append=append/]</div>
+		      </div>
+	      [#elseif t.id!=1 && t.id!=2 ] 
+			  <div class="topic-item clearfix">
+		        <div class="topic-item-img"><a href="${base}/topic/${t.id}.jspx" target="_blank"><img src="${t.titleImg!site.defImg}"></a></div>
+		        <div class="topic-item-title"><a href="${base}/topic/${t.id}.jspx" target="_blank">${t.name}</a></div>
+		        <div class="topic-item-des">[@text_cut s=t.description len=descLen append=append/]</div>
+		      </div>
+	      [/#if]		      
+		      
+      
+      [/#if]
+      
       [/#list]
-      [#include "../include/page.html"/]
+   <!--    [#include "../include/page.html"/] -->
       [/@cms_topic_page]
     </div>
   </section>

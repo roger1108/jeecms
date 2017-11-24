@@ -33,6 +33,11 @@ public class TopicAct {
 			HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) {
 		// 全部？按站点？按栏目？要不同模板？
+		String special = request.getParameter("special");
+		if (special == null)
+			special = "0";
+		model.addAttribute("special", special);	
+		
 		CmsSite site = CmsUtils.getSite(request);
 		FrontUtils.frontData(request, model, site);
 		FrontUtils.frontPageData(request, model);
