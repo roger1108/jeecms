@@ -150,7 +150,7 @@ $(function() {
       <div class="nav-link"><a href="${base}/wqxw/index.jhtml">热点聚焦</a></div>
       [@cms_content_list typeId='4' count='1' titLen='25' channelId='75' orderBy='4' channelOption='0' dateFormat='yyyy-MM-dd']
       [#list tag_list as a]
-      <div class="rdjj-top-news"><a href="${a.url}" target="_blank">[@text_cut s=a.title len=titLen append='...'/]</a></div>
+      <div class="rdjj-top-news"><a href="${a.url}" target="_blank">[@text_cut s=a.title len=24 append='...'/]</a></div>
       [/#list]
       [/@cms_content_list]
       <div class="rdjj-list">
