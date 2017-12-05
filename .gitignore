@@ -1,6 +1,3 @@
 /build/
-classes/
-config/
-jdbc.properties
-com
+*.class
 /WebContent/WEB-INF/config/jdbc.properties
