@@ -1,3 +1,4 @@
 /build/
-classes/*
-config/*
+classes/
+config/
+jdbc.properties
