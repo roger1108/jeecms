@@ -3,3 +3,4 @@ classes/
 config/
 jdbc.properties
 com
+/WebContent/WEB-INF/config/jdbc.properties
